@@ -42,23 +42,27 @@ function generatePassword() {
 
 	console.log(passChoices);
 
-	pswdLength = prompt('Enter length of password: 8 to 128 characters');
-	pswdLength = parseInt(pswdLength);
-	console.log(pswdLength);
-	while (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
-		pswdLength = prompt('Invalid number. Please enter a length between 8 and 128 characters');
+	if (passChoices.length) {
+		pswdLength = prompt('Enter length of password: 8 to 128 characters');
+		pswdLength = parseInt(pswdLength);
+		console.log(pswdLength);
+		while (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
+			pswdLength = prompt('Invalid number. Please enter a length between 8 and 128 characters');
+		}
+
+		for (let i = 0; i < pswdLength; i++) {
+			let randChar = Math.floor(Math.random() * passChoices.length);
+			console.log(randChar);
+			passBuilder.push(passChoices[randChar]);
+		}
+
+		let password = passBuilder.join('');
+		console.log(password);
+
+		return password;
+	} else {
+		return '';
 	}
-
-	for (let i = 0; i < pswdLength; i++) {
-		let randChar = Math.floor(Math.random() * passChoices.length);
-		console.log(randChar);
-		passBuilder.push(passChoices[randChar]);
-	}
-
-	let password = passBuilder.join('');
-	console.log(password);
-
-	return password;
 }
 
 // Add event listener to generate button
