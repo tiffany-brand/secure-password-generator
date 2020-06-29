@@ -48,6 +48,7 @@ function generatePassword() {
 
 		if (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
 			alert('Please enter a password length between 8 and 128 characters.');
+			return '';
 		} else {
 			for (let i = 0; i < pswdLength; i++) {
 				let randChar = Math.floor(Math.random() * passChoices.length);
