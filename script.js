@@ -1,5 +1,10 @@
 // Assignment Code
 const generateBtn = document.querySelector('#generate');
+const lengthBox = document.querySelector('#length');
+const lowerBox = document.querySelector('#lowercase');
+const upperBox = document.querySelector('#uppercase');
+const numbersBox = document.querySelector('#numbers');
+const specialCharBox = document.querySelector('#special-char');
 
 // Write password to the #password input
 function writePassword() {
@@ -13,53 +18,48 @@ function generatePassword() {
 	const lowerLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
 	const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 	const numbers = '0123456789'.split('');
-	const specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split('');
+	const specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split('');
 
 	let passChoices = [];
 	let passBuilder = [];
-	let passLength = 0;
 
-	let inclLower = confirm('Include lower case letters?');
-	let inclUpper = confirm('Include upper case letters?');
-	let inclNumbers = confirm('Include numbers?');
-	let inclSpecial = confirm('Include special characters?');
+	let pswdLength = parseInt(lengthBox.value);
 
-	if (inclLower) {
+	if (lowerBox.checked) {
 		passChoices = passChoices.concat(lowerLetters);
 	}
 
-	if (inclUpper) {
+	if (upperBox.checked) {
 		passChoices = passChoices.concat(upperLetters);
 	}
 
-	if (inclNumbers) {
+	if (numbersBox.checked) {
 		passChoices = passChoices.concat(numbers);
 	}
 
-	if (inclSpecial) {
-		passChoices = passChoices.concat(specialChar);
+	if (specialCharBox.checked) {
+		passChoices = passChoices.concat(specialChars);
 	}
 
 	console.log(passChoices);
 
 	if (passChoices.length) {
-		pswdLength = prompt('Enter length of password: 8 to 128 characters');
-		pswdLength = parseInt(pswdLength);
 		console.log(pswdLength);
-		while (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
-			pswdLength = prompt('Invalid number. Please enter a length between 8 and 128 characters');
+
+		if (pswdLength < 8 || pswdLength > 128) {
+			alert('Please enter a password length between 8 and 128 characters.');
+		} else {
+			for (let i = 0; i < pswdLength; i++) {
+				let randChar = Math.floor(Math.random() * passChoices.length);
+				console.log(randChar);
+				passBuilder.push(passChoices[randChar]);
+			}
+
+			let password = passBuilder.join('');
+			console.log(password);
+
+			return password;
 		}
-
-		for (let i = 0; i < pswdLength; i++) {
-			let randChar = Math.floor(Math.random() * passChoices.length);
-			console.log(randChar);
-			passBuilder.push(passChoices[randChar]);
-		}
-
-		let password = passBuilder.join('');
-		console.log(password);
-
-		return password;
 	} else {
 		return '';
 	}
