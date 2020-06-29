@@ -46,7 +46,7 @@ function generatePassword() {
 	if (passChoices.length) {
 		console.log(pswdLength);
 
-		if (pswdLength < 8 || pswdLength > 128) {
+		if (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
 			alert('Please enter a password length between 8 and 128 characters.');
 		} else {
 			for (let i = 0; i < pswdLength; i++) {
