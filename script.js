@@ -61,6 +61,7 @@ function generatePassword() {
 			return password;
 		}
 	} else {
+		alert('Please check at least one character type.');
 		return '';
 	}
 }
