@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -26,7 +26,7 @@
                         <form>
                             <div class="d-flex flex-wrap justify-content-around">
                                 <div>
-                                    <input type="number" id="length" min="8" max="128" value="16" />
+                                    <input type="number" id="length" min="8" max="128" step="1" value="16" />
                                     <label for="length">Password Length</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -49,8 +49,7 @@
                             </div>
 
                             <div class="d-flex flex-column align-content-center">
-                                <textarea readonly id="password" placeholder="Your Secure Password"
-                                    aria-label="Generated Password"></textarea>
+                                <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
                                 <a href="#" id="generate" class="btn btn-lg btn-info">Generate Password</a>
                             </div>
                         </form>
