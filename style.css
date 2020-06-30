@@ -1,6 +1,11 @@
+
+/* Background styling */
+
 body {
     background-color: #9bdfdf;
 }
+
+/* Headings */
 
 h1 {
 padding-bottom: 20px;
@@ -14,6 +19,9 @@ h3 {
     font-size: 1.5rem;
     padding-bottom: 10px;
 }
+
+
+/* Password display textarea */
 
 #password {
 	-webkit-appearance: none;
