@@ -36,6 +36,9 @@
                                 <div class="d-flex flex-wrap justify-content-around">
                                     <div>
                                         <!-- Length input with validation - users can only enter numbers - no letters, spec chars, or decimals -->
+                                        <!-- Code found at StackOverflow Question: How to avoid decimal values in input -->
+                                        <!-- https://stackoverflow.com/questions/37043867/how-to-avoid-decimal-values-in-input-type-number -->
+                                        <!-- Checks key pressed and displays it only if it's in the ASCII range for digits 0-9 -->
                                         <input type="number" id="length" min="8" max="128" step="1" value="16"
                                             onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
                                         <label for="length">Password Length</label>
