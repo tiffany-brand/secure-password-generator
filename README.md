@@ -1,5 +1,5 @@
 # Secure Password Generator
-This project is a password generator using HTML, CSS, and JavaScript to create secure passwords based on criteria.  Users can choose the types of characters to include in the password, as well as the length of the password. The code will check for a valid length (between 8 and 128 characters) and will validate that at least one type of character has been chosen. Then the password will be generated and displayed on the page. 
+This project is a password generator using HTML, CSS, and JavaScript to create secure passwords based on criteria.  Users can choose the types of characters to include in the password as well as the length of the password by filling in the presented form. The code will check for a valid length (between 8 and 128 characters) and will validate that at least one character type has been chosen. Random characters will be chosen and the generated password will be displayed on the page. 
 
 Styling is responsive and uses the Bootstrap CSS framework. To prompt the user for password criteria, a form was created that allows the user to input the length into a field, and checkboxes to indicate which types of characters to include in the password.
 

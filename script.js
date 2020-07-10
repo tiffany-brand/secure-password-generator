@@ -48,8 +48,10 @@ function generatePassword() {
 	}
 
 
-	// Validate that a length of appropriate size was input
+
+	// Make sure at least one character type is checked
 	if (passChoices.length) {
+		// Validate that a length of appropriate size was input
 		if (pswdLength < 8 || pswdLength > 128 || isNaN(pswdLength)) {
 			alert('Please enter a password length between 8 and 128 characters.');
 			return '';
@@ -65,7 +67,7 @@ function generatePassword() {
 			return password;
 		}
 	} else {
-		// Make sure at least one parameter is checked
+		// Alert if no character types are checked
 		alert('Please check at least one character type.');
 		return '';
 	}
