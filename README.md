@@ -12,7 +12,8 @@ View the Secure Password Generator at: https://tiffany-brand.github.io/secure-pa
 2. [Requirements](#Requirements)
 3. [Technologies](#Technologies)
 4. [Screenshots](#Screenshots)
-5. [License](#License)
+5. [Contact](#Contact)
+6. [License](#License)
 
 
 ## Description
@@ -63,6 +64,10 @@ THEN the password is either displayed in an alert or written to the page
 ![password-generator-screen](https://user-images.githubusercontent.com/16748389/86188829-dde59100-bb0d-11ea-9af0-22cd2166d3c1.JPG)
 
 ![password-generator-screen-2](https://user-images.githubusercontent.com/16748389/86188925-1c7b4b80-bb0e-11ea-9b41-584b8b1077f9.JPG)
+
+## Contact
+
+- [Tiffany Brand](https://github.com/tiffany-brand)
 
 ## License
 
