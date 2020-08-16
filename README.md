@@ -10,8 +10,9 @@ View the Secure Password Generator at: https://tiffany-brand.github.io/secure-pa
 
 1. [Description](#Description)
 2. [Requirements](#Requirements)
-3. [Screenshots](#Screenshots)
-4. [License](#License)
+3. [Technologies](#Technologies)
+4. [Screenshots](#Screenshots)
+5. [License](#License)
 
 
 ## Description
@@ -50,6 +51,12 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
 
 ## Screenshots
 
