@@ -43,3 +43,7 @@ THEN the password is either displayed in an alert or written to the page
 ![password-generator-screen](https://user-images.githubusercontent.com/16748389/86188829-dde59100-bb0d-11ea-9af0-22cd2166d3c1.JPG)
 
 ![password-generator-screen-2](https://user-images.githubusercontent.com/16748389/86188925-1c7b4b80-bb0e-11ea-9b41-584b8b1077f9.JPG)
+
+## License
+
+[MIT License](./LICENSE)
